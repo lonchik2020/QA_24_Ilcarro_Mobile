@@ -26,7 +26,7 @@ public class RegistrationTests extends AppiumConfig {
                 .typeRegistrationForm(user)
                 .clickCheckBoxIAgree()
                 .clickBtnYallaPositive()
-                .isElementPresent_popUpMessageRegSuccess());
+                .isElementPresent_popUpMessageSuccess("Registration success!"));
     }
 
     @Test
