@@ -12,6 +12,12 @@ public class BaseScreen {
 
     AppiumDriver<MobileElement>driver;
 
+    public int[] getScreenSize() {// get screen size [0] height, [1] - weight
+        int height = driver.manage().window().getSize().getHeight();
+        int wight = driver.manage().window().getSize().getWidth();
+        return new int[]{height, wight};
+    }
+
     public BaseScreen(AppiumDriver<MobileElement> driver) {
         this.driver = driver;
         // page factory allows to use annotation find by
